@@ -2,7 +2,7 @@ import React from 'react';
 import { withRouter, RouteComponentProps } from 'react-router-dom';
 import styled from 'styled-components';
 
-import LogoIcon from 'icons/logo.svg';
+import LogoIcon from '../../../icons/logo2.png';
 import { capitalizeFirstLetter } from 'shared/utility';
 
 const LogoContainer = styled.a`
@@ -12,10 +12,10 @@ const LogoContainer = styled.a`
 `;
 
 const LogoImg = styled.img`
-  width: 4.7rem;
-  height: 4.7rem;
-  margin-bottom: 0.4rem;
-  padding-right: 0.4rem;
+  width: 137px;
+  height: 47px;
+  margin-bottom: 4px;
+  padding-right: 4px;
 `;
 
 const LogoText = styled('span')<{ path: string }>`
@@ -33,9 +33,6 @@ const Logo = ({ location }: RouteComponentProps) => {
   return (
     <LogoContainer href="/">
       {path === 'keep' && <LogoImg src={LogoIcon} alt="Logo" />}
-      <LogoText path={path === 'keep' ? path : null}>
-        {capitalizeFirstLetter(path)}
-      </LogoText>
     </LogoContainer>
   );
 };
